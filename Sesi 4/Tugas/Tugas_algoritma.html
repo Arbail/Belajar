@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>algoritma menghitung luas dan keliling lingkaran</h2>
+    <script>
+        // Menghitung luas dan keliling lingkaran
+
+// Fungsi untuk menghitung luas lingkaran
+function hitungLuasLingkaran(r) {
+    return Math.PI * r * r;
+}
+
+// Fungsi untuk menghitung keliling lingkaran
+function hitungKelilingLingkaran(r) {
+    return 2 * Math.PI * r;
+}
+
+// Input panjang jari-jari lingkaran dari pengguna
+let radius = parseFloat(prompt("Masukkan panjang jari-jari lingkaran:"));
+
+// Memastikan input adalah angka positif
+if (isNaN(radius) || radius <= 0) {
+    console.log("Masukkan harus berupa angka positif.");
+} else {
+    // Hitung luas lingkaran
+    let luas = hitungLuasLingkaran(radius);
+
+    // Hitung keliling lingkaran
+    let keliling = hitungKelilingLingkaran(radius);
+
+    // Menampilkan hasil kalkulasi
+    console.log("Luas lingkaran:", luas.toFixed(2));
+    console.log("Keliling lingkaran:", keliling.toFixed(2));
+}
+    </script>
+  </body>
+</html>
